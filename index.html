@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teleperformance ID Link Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@latest"></script>
+</head>
+<body>
+
+<!-- Logo BG-->
+<div class="logo-container">
+    <img src="TPLogo11.png" alt="Logo">
+</div>
+
+<div class="popup-container">
+    
+    <div class="popup-content" id="step1">
+        <div class="additional-logo">
+            <img src="TPLogo11.png" alt="Additional Logo">
+        </div>
+        <h2>あなたのBMS アイデンティティを入力</h2>
+        <form id="id-form">
+            <label for="id">BMS アイデンティティ:</label>
+           
+            <input type="text" id="id" name="id" required placeholder="こちらにあなたのBMS アイデンティティを入力してください。"> <!-- Added placeholder text -->
+            <p>推薦はどちらの国へ優先しますか？ </p> <!-- Added sentence under input field -->
+
+            <button type="submit">マレーシア</button>
+        </form>
+    </div>
+
+    <div class="popup-content" id="step2" style="display: none;">
+        <div class="additional-logo">
+            <img src="TPLogo11.png" alt="Additional Logo">
+        </div>
+        <h2>友人を推薦していただき、ありがとうございます！</h2>
+        <p>当社がタイに成長するにつれ、#ElevateAsia のように #MoreTogether になってい行きます。こちらは友人が利用できるリンクがあります。それで、あなたのプロフィールにタグ付けされて当社の採用システムに追加されます。</p>
+        <div id="generated-link"></div>
+        <!-- Add buttons to share link via WhatsApp and Line -->
+        <button id="share-button-whatsapp">WhatsAppで共有 </button>
+        <button id="share-button-line">LINEでシェア</button>
+        
+        <div id="qrBox">
+            <img src="" id="qrImg">
+        </div>
+        <button onclick="generateQrCode()">または上のコードを友達にスキャンしてもらいまし
+            ょう ！</button>
+        <p>友人を推薦していただき、ありがとうございます！</p>
+        <p>当社がタイに成長するにつれ、#ElevateAsia のように #MoreTogether になってい行きます。こちらは友人が利用できるリンクがあります。それで、あなたのプロフィールにタグ付けされて当社の採用システムに追加されます。</p>
+        <h2>VRで拠点を訪問してもらい、当社についてさらに知ってもらいましょう：</h2>
+
+        <div id="picture-container">
+            <img src="MicrosoftTeams-image.png" alt="Description of the image">
+        </div>
+        <p>タレントアトラクションチームより</p>
+      
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
